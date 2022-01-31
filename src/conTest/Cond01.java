@@ -7,7 +7,7 @@ public class Cond01 {
 		score *= 100;
 		
 		String msg = "당신의 점수는 " + score + "점이고, 상품은 ";	// String 문자열 전체가 msg 변수로 선언된다.
-																	// msg 문자열 마지막 "상품은 " 뒷부분은 switch 문으로 연결한다.
+									  // msg 문자열 마지막 "상품은 " 뒷부분은 switch 문으로 연결한다.
 			switch(score) {
 				case 100:
 					msg += "연필";		break;
