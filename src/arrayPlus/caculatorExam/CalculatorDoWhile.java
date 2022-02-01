@@ -1,4 +1,4 @@
-package calculatorExam;
+package arrayPlus.caculatorExam;
 
 import java.util.Scanner;
 
