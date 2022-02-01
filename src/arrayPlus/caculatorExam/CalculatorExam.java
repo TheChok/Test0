@@ -1,4 +1,4 @@
-package calculatorExam;
+package arrayPlus.caculatorExam;
 
 public class CalculatorExam {
 	public static void main(String[] args) {
