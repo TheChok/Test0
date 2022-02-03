@@ -7,10 +7,10 @@ public class Array04Arraycopy {
 		char[] num = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};	// 값을 입력할땐 중괄호
 		
 		// 배열 abc와 num을 붙여서 새로운 배열을 만들자.
-		char result[] = new char[abc.length + num.length];					// 방의 갯수를 입력할땐 대괄호
+		char result[] = new char[abc.length + num.length];			// 방의 갯수를 입력할땐 대괄호
 		// System.arraycopy(복사위치, 복사시작지점, 붙여넣기위치, 붙여넣을시작위치, 길이);
-		System.arraycopy(abc, 0, result, 0, abc.length);					// abc에 있는 내용을 붙여넣기하고
-		System.arraycopy(num, 0, result, abc.length, num.length);			// num에 있는 내용도 붙여넣기 한다 (2번 작업)
+		System.arraycopy(abc, 0, result, 0, abc.length);			// abc에 있는 내용을 붙여넣기하고
+		System.arraycopy(num, 0, result, abc.length, num.length);		// num에 있는 내용도 붙여넣기 한다 (2번 작업)
 		
 		// 결과 확인
 		for(int i = 0; i < result.length; i++) {	System.out.print(result[i] + ", ");	}
@@ -30,7 +30,7 @@ class CoinExchangeTest {
 			int num = myMoney/coinUnit[i]; 			// 가지고 있는 동전으로 바꿀 수 있는지 확인해야 한다.
 			if(coin[i] >= num) 	coin[i] -= num;		// 동전갯수가 충분하면 num만큼 뺀다.
 			else {	num = coin[i]; coin[i] = 0;	}	// 동전갯수가 부족하면 num을 5로 바꾸고 코인갯수는 0으로 바꾼다.
-			myMoney -= num*coinUnit[i];				// 소지금액에서 (동전단위 * num) 만큼 차감한다.
+			myMoney -= num*coinUnit[i];			// 소지금액에서 (동전단위 * num) 만큼 차감한다.
 			System.out.println(coinUnit[i] + "원을 " + num + "개 바꾸었습니다.");
 		}	System.out.println();
 		
