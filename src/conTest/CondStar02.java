@@ -24,7 +24,7 @@ class StarExam05 {
 		for(int line = lineNum; line > 0; line--) {
 			for(int col = lineNum; col > 0; col--) {
 				if(line < col) 	System.out.print(" ");
-				else 			System.out.print("★");
+				else 		System.out.print("★");
 			}
 			System.out.println();
 		}
