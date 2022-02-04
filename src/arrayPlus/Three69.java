@@ -20,9 +20,9 @@ class Three69Exam01 {
 			b = i % 10; // 검사대상을 10으로 나눈 나머지
 			
 			if(a > 0 && b > 0 && a % 3 == 0 && b % 3 == 0) 	System.out.println("짝짝");
-			else if(a > 0 && a % 3 == 0)					System.out.println("짝");
-			else if(b > 0 && b % 3 == 0)					System.out.println("짝");
-			else 											System.out.println(i);
+			else if(a > 0 && a % 3 == 0)			System.out.println("짝");
+			else if(b > 0 && b % 3 == 0)			System.out.println("짝");
+			else 						System.out.println(i);
 		}
 	} // End - Three69Exam01()
 } // End - class Three69Exam01
