@@ -12,30 +12,30 @@ public class Seongjeok {
 		String name[] = new String[in.nextInt()];	// 정수를 입력받을 때는 nextInt()
 		
 		// 2. name[] 변수의 길이를 이용해서 변수들을 준비한다.
-		int[] 	 	kor = new int[name.length], 	eng = new int[name.length], 	mat = new int[name.length],
-				 	tot = new int[name.length], 	rank = new int[name.length];	double[] avg = new double[name.length];		
-		String[] 	grade = new String[name.length];
+		int[]	 kor = new int[name.length], eng = new int[name.length], mat = new int[name.length],
+			 tot = new int[name.length], rank = new int[name.length]; double[] avg = new double[name.length];		
+		String[] grade = new String[name.length];
 		
 		// 3. 학생의 수만큼 이름, 국어점수, 영어점수, 수학점수를 입력받아 각각의 배열에 저장한다. 
 		for(int i = 0; i < name.length; i++) {
-			System.out.print("학생이름: ");	 name[i] = in.next();		System.out.print("국어점수: ");  kor[i] = in.nextInt();
-			System.out.print("영어점수: ");	 eng[i] = in.nextInt();		System.out.print("수학점수: ");	 mat[i] = in.nextInt();
+			System.out.print("학생이름: "); name[i] = in.next();	System.out.print("국어점수: "); kor[i] = in.nextInt();
+			System.out.print("영어점수: "); eng[i] = in.nextInt();	System.out.print("수학점수: "); mat[i] = in.nextInt();
 
 			// 총점과 평균을 구한다.
-			tot[i] = kor[i] + eng[i] + mat[i];		avg[i] = tot[i] / 3;
+			tot[i] = kor[i] + eng[i] + mat[i];	avg[i] = tot[i] / 3;
 			// 등급 분류
-			if(avg[i] >= 90) 		grade[i]	= "A학점";
-			else if(avg[i] >= 80)	grade[i]	= "B학점";
-			else if(avg[i] >= 70)	grade[i]	= "C학점";
-			else if(avg[i] >= 60)	grade[i]	= "D학점";
-			else					grade[i]	= "F학점";
+			if(avg[i] >= 90)	grade[i] = "A학점";
+			else if(avg[i] >= 80)	grade[i] = "B학점";
+			else if(avg[i] >= 70)	grade[i] = "C학점";
+			else if(avg[i] >= 60)	grade[i] = "D학점";
+			else			grade[i] = "F학점";
 		}
 		
 		// 4. 석차 구하기 - 석차는 1부터 시작하므로 rank의 방을 1로 초기화하고 시작한다.
 		for(int i = 0; i < rank.length; i++) {	rank[i] = 1; }
 		for(int i = 0; i < rank.length; i++) {
 			for(int j = 0; j < rank.length; j++) {
-				if(tot[i] < tot[j]) {	rank[i]++;	}
+				if(tot[i] < tot[j]) { rank[i]++; }
 			}
 		}
 		
